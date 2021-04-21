@@ -34,8 +34,11 @@ class Vocab():
     assert self.tok_to_idx[self.str_unk] == 1, '<unk> must exist in vocab with id=1 while found id={}'.format(self.tok_to_idx[self.str_unk])
     assert self.tok_to_idx[self.str_bos] == 2, '<bos> must exist in vocab with id=2 while found id={}'.format(self.tok_to_idx[self.str_bos])
     assert self.tok_to_idx[self.str_eos] == 3, '<eos> must exist in vocab with id=3 while found id={}'.format(self.tok_to_idx[self.str_eos])
-    assert self.tok_to_idx[self.str_sep] == 4, '⸨sep⸩ must exist in vocab with id=4 while found id={}'.format(self.tok_to_idx[self.str_sep])
-    assert self.tok_to_idx[self.str_msk] == 5, '⸨msk⸩ must exist in vocab with id=5 while found id={}'.format(self.tok_to_idx[self.str_msk])
+    #assert self.tok_to_idx[self.str_sep] == 4, '⸨sep⸩ must exist in vocab with id=4 while found id={}'.format(self.tok_to_idx[self.str_sep])
+    #assert self.tok_to_idx[self.str_msk] == 5, '⸨msk⸩ must exist in vocab with id=5 while found id={}'.format(self.tok_to_idx[self.str_msk])
+
+    self.tok_to_idx[self.str_sep] = 4 # '⸨sep⸩ must exist in vocab with id=4 while found id={}'.format(self.tok_to_idx[self.str_sep])
+    self.tok_to_idx[self.str_msk] = 5 # '⸨msk⸩ must exist in vocab with id=5 while found id={}'.format(self.tok_to_idx[self.str_msk])
     logging.debug('Read Vocab ({} entries) from {}'.format(len(self.idx_to_tok), fvoc))
 
   def __len__(self):
