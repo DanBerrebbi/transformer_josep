@@ -43,7 +43,7 @@ class Options():
     ### data
     self.shard_size = 500000
     self.max_length = 100
-    self.batch_size = 4096
+    self.batch_size = 2048
     self.batch_type = 'tokens'
 
     self.cuda = False
